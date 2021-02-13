@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { commerce } from './lib/commerce';
 import { Products, Navbar } from './components';
+import { ContactSupportOutlined } from '@material-ui/icons';
 
-function App() {
+const App = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
 
@@ -31,7 +32,7 @@ function App() {
     
     return (
         <div>
-            <Navbar />
+            <Navbar totalItems={cart.total_items}/>
            <Products products={products} onAddToCart={handleAddToCart} />
         </div>
     )
