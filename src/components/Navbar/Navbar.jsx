@@ -3,14 +3,17 @@ import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '
 import { ShoppingCart } from '@material-ui/icons';
 
 import logo from '../../assets/commerce.png';
+import useStyles from './styles';
 
 const Navbar = () => {
+    const classes = useStyles();
+
     return (
-        <>
+        <div>
             <AppBar position="fixed" className={classes.appBar} color="inherit">
                 <Toolbar>
 
-                    <Typography variant ="h6" className={classes.appBar} color="inherit">
+                    <Typography variant="h6" className={classes.appBar} color="inherit">
                         <img src={logo} alt="Esther's E-Commerce" height="25px" className={classes.image} />
                         Esther E-Commerce
                     </Typography>
@@ -27,7 +30,7 @@ const Navbar = () => {
 
 
             </AppBar>
-        </>
+        </div>
     )
 }
 
